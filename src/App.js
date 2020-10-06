@@ -40,7 +40,7 @@ const App = () => {
       if (postId.id === post.id){
         return {...post, likes: post.likes + 1}
       }
-      return post
+      return post.likes
     }))
 
   };
@@ -49,7 +49,7 @@ const App = () => {
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       <SearchBar />
-      <Posts data = {posts}/>
+      <Posts data = {posts} likePost = {likePost}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
