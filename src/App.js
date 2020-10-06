@@ -37,10 +37,10 @@ const App = () => {
       // 3. id === postId return spread variable likes : post.likes + 1
 
     setPosts(posts.map(post => {
-      if (postId.id === post.id){
+      if (postId === post.id){
         return {...post, likes: post.likes + 1}
       }
-      return post.likes
+      return post
     }))
 
   };
